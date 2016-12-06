@@ -1,4 +1,23 @@
-$mainColor: #333;
-$fontFamily: Helvetica, Arial, sans-serif;
-$linkColor: #699;
-$bgColor: #f8f8f8;
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('../fonts/subset-MyriadPro-Semibold.woff2') format('woff2'),
+		url('../fonts/subset-MyriadPro-Semibold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('../fonts/subset-MyriadPro-Light.woff2') format('woff2'),
+		url('../fonts/subset-MyriadPro-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('../fonts/subset-MyriadPro-Regular.woff2') format('woff2'),
+		url('../fonts/subset-MyriadPro-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
