@@ -131,8 +131,17 @@ body {
 		border-radius: 3px;
 		outline: 0;
 		padding: 0 15px;
-		margin-bottom: 20px;
 		font-size: 16px;
+		&.err {
+			
+			border-color: red;
+		}
+	}
+	.ol-err {
+		color: #fff;
+		padding-left: 15px;
+		display: block;
+		margin: 5px 0 15px;
 	}
 	.select {
 		-webkit-appearance: none;
@@ -143,6 +152,19 @@ body {
 		cursor: pointer;
 		padding-right: 25px;
 		background: url(../img/arr-d.png) right 10px center no-repeat #fff;
+	}
+	input.terms {
+		width: 20px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+	.terms-label {
+		color: #fff;
+		margin-bottom: 15px;
+		a {
+			color: #fff;
+		}
 	}
 	.form-row {
 		.code {
@@ -174,7 +196,9 @@ body {
 			background: linear-gradient(to bottom,  #e80e4b 0%,#ed1850 30%,#ee1b52 32%,#ef1c51 37%,#f12155 45%,#f12153 48%,#f62858 59%,#f42958 62%,#fa335c 79%,#fd3b60 100%);
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e80e4b', endColorstr='#fd3b60',GradientType=0 );
 		}
-
+	}
+	.errors {
+		color: red;
 	}
 }
 

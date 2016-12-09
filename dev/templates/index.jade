@@ -8,22 +8,43 @@ block content
 				.form-inner
 					p Только к новому году все наши новые клиенты получат подарки!
 					p Начни свой путь на финансовом рынке с новым iPhone 7*
-					form#open-account-form(action='https://binaring.com/registration')
-						input(type='text', placeholder='Имя', name='fname')
-						input(type="password" placeholder="Пароль" name="pass")
-						input(type='text', placeholder='Фамилия', name='lname')
-						input(type='email', placeholder='Адрес эл. почты', name='email')
+					form#open-account-form
+						.inp-wrap
+							input(type='text', placeholder='Имя', name='fname')
+							span.ol-err
+						.inp-wrap
+							input(type='text', placeholder='Фамилия', name='lname')
+							span.ol-err
+						.inp-wrap
+							input(type='email', placeholder='Адрес эл. почты', name='email')
+							span.ol-err
+						.inp-wrap
+							input(type='password', placeholder='Пароль', name='password')
+							span.ol-err
 						.form-row.cf
 							input.code(type='text', placeholder='+7', name='phone_prefix')
 							input.number(type='text', placeholder='Телефон', name='phone')
-						select.select(name='country')
-						//- Campaign specific
-						input#your-campaign(type='hidden', name='affiliate_id', value='1')
-						input#your-campaign(type='hidden', name='campaign_id', value='1')
-						input#your-a_aid(type='hidden', name='a_aid', value='#test')
-						input#your-b_bid(type='hidden', name='b_bid', value='#test')
+							span.ol-err
+						.inp-wrap
+							select.select(name='country')
+							span.ol-err
+						input#your-language(type='hidden', name='language', value='Russian')
+						input#your-currency(type='hidden', name='currency', value='USD')
+						//- Campaign info
+						input#your-affiliate(type='hidden', name='affiliate', value='')
+						input#your-campaign(type='hidden', name='campaign', value='')
+						input#your-a_aid(type='hidden', name='a_aid', value='')
+						input#your-b_bid(type='hidden', name='b_bid', value='')
+						input#your-trading_group_id(type='hidden', name='trading_group_id', value='')
+						//- Terms & Conditions checkbox
+						label.terms-label
+							input.terms(type='checkbox', name='terms', value='1')
+							| Я принимаю 
+							a(target='_blank', href='https://binaring.com/terms-conditions/') правила и соглашения*
 						input.submit(type='submit', value='Зарегистрироваться сейчас')
 						p.note * количество ограничено
+						.errors.alert.alert-danger(style='display: none;')
+
 			.iphone-img
 				img(src="img/iphone.png", alt="")
 			.exp-text
